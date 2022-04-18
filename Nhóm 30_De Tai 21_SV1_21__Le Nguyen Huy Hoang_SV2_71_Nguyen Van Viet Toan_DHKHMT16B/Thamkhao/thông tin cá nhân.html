@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 17</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js">
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 border">Nav</div>
+            <div class="col-10 border">
+                <h1 class="text-center text-uppercase">thông tin cá nhân</h1>
+                <form action="">
+                    <div class="row mt-3">
+                        <div class="col-3 text-right">
+                            <label for="txtHoten">Họ và tên: </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="txtHoten" class="form-control" required="required" placeholder="Nhập vào họ và tên" value="Nguyễn Hoàng Lan" onblur="return kiemtraHoten();">
+                        </div>
+                        <div class="col-3">
+                            <span id="tbHoten" class="text-danger font-italic">*</span>
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-3">
+                        <div class="col-3 text-right">
+                            <label for="txtNgaysinh">Ngày sinh: </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="date" id="txtNgaysinh" class="form-control" value="1998-01-01">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-3 text-right">
+                            <label>Giới tính: </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="radio" id="rdoNam" name="gioitinh" >
+                            <label for="rdoNam">Nam</label>
+                            <input type="radio" id="rdoNu" name="gioitinh" checked="checked">
+                            <label for="rdoNu">Nữ</label>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-3 text-right">
+                            <label for="txtDienthoai">Điện thoại: </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="txtDienthoai" class="form-control" placeholder="Nhập vào số điện thoại (9-10 số)" value="093444555" onblur="return kiemtraDienthoai();">
+                        </div>
+                        <div class="col-3">
+                            <span id="tbDienthoai" class="text-danger font-italic"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-12 text-center">
+                            <button class="btn btn-dark" id="btnDangky" type="button" onclick="return dangky();">Đăng ký</button>
+                            <button class="btn btn-dark" id="btnHuy" type="reset">Hủy</button>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Họ và tên</th>
+                                        <th>Ngày sinh</th>
+                                        <th>Giới tính</th>
+                                        <th>Số điện thoại</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="myTable">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
